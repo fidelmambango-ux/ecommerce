@@ -12,7 +12,7 @@ body {
 
 .accueil {
     height: 100vh;
-    background-image: url("images/ecomme.jpg");
+    background-image: url("ecomme.jpg");
     background-size: cover;
     background-position: center;
     animation: zoomMove 20s infinite alternate ease-in-out;
@@ -288,3 +288,4 @@ button:hover{
         background-size: 110%;
     }
 }
+
