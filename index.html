@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bienvenue dans notre Boutique en ligne</title>
+    <link rel="stylesheet" href="style.css">
+    <a href="panier.html" class="panier-flottant">🛒</a>
+
+</head>
+<body>
+    <div id="loader">
+    <div class="spinner"></div>
+</div>
+
+    <header>
+         <nav>
+        <a href="index.html">Accueil</a>
+        <a href="produits.html">Produits</a>
+        <a href="panier.html">Panier</a>
+        <a href="apropos.html">À propos</a>
+        <a href="commande.html">Commandez</a>
+    </nav>
+    </header>
+
+<div class="accueil">
+
+    <div class="contenu-accueil">
+        <h1>Bienvenue chez Elia ngoy Store</h1>
+       <p id="texteChange"></p>
+
+
+        <br>
+        <a href="produits.html">
+            <button class="btn-accueil">
+                Voir les Produits
+            </button>
+        </a>
+    </div>
+
+</div>
+
+<script>
+let textes = [
+    "Découvrez nos meilleurs produits",
+    "Paiement Mobile Money sécurisé",
+    "Livraison rapide partout",
+    "Qualité garantie à 100%"
+];
+
+let index = 0;
+let element = document.getElementById("texteChange");
+
+function changerTexte(){
+    element.innerText = textes[index];
+    index = (index + 1) % textes.length;
+}
+
+changerTexte();
+setInterval(changerTexte, 3000);
+</script>
+
+
+<script>
+window.addEventListener("load", function(){
+    document.getElementById("loader").style.display = "none";
+});
+</script>
+
+
+</body>
+</html>

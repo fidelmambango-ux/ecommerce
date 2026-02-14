@@ -1,0 +1,290 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.accueil {
+    height: 100vh;
+    background-image: url("images/ecomme.jpg");
+    background-size: cover;
+    background-position: center;
+    animation: zoomMove 20s infinite alternate ease-in-out;
+}
+
+@keyframes zoomMove {
+    0% {
+        background-size: 100%;
+        background-position: center;
+    }
+    100% {
+        background-size: 115%;
+        background-position: top;
+    }
+}
+
+
+
+
+header{
+    background:#0d6efd;
+    color:white;
+    padding:15px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+header h1{
+    animation: slideDown 1s ease;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    text-decoration:underline;
+}
+
+.container{
+    padding:40px;
+}
+
+.card{
+    background:white;
+    padding:15px;
+    border-radius:10px;
+    box-shadow:0 4px 8px rgba(0,0,0,0.1);
+    margin:15px;
+    transition:0.4s;
+    animation: fadeIn 1s ease;
+}
+
+.card:hover{
+    transform:scale(1.05);
+}
+
+.products{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+button{
+    background:#0d6efd;
+    color:white;
+    border:none;
+    padding:10px 15px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#084298;
+}
+
+footer{
+    background:#0d6efd;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+}
+
+@keyframes fadeIn{
+    from{opacity:0; transform:translateY(30px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+@keyframes slideDown{
+    from{transform:translateY(-50px); opacity:0;}
+    to{transform:translateY(0); opacity:1;}
+}
+
+
+/* Image plein écran page accueil */
+.accueil{
+    margin:0;
+    padding:0;
+    height:100vh;
+    background-image: url("images/ecomme.jpg");
+    background-size: cover;       /* occupe toute la page */
+    background-position: center;  /* bien centrée */
+    background-repeat: no-repeat; /* pas de répétition */
+}
+
+
+button {
+    padding:10px;
+    border:none;
+    border-radius:8px;
+    background:#007bff;
+    color:white;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#0056b3;
+    transform:scale(1.05);
+}
+
+.animation-ajout {
+    animation: pulse 0.4s ease;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+
+/* ===== ACCUEIL MODERNE ===== */
+
+.accueil {
+    height: 100vh;
+    background-image: url("images/ecomme.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+/* Overlay sombre */
+.accueil::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+}
+
+/* Contenu centré */
+.contenu-accueil {
+    position: relative;
+    z-index: 2;
+    animation: fadeIn 2s ease;
+}
+
+/* Animation texte */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Titre */
+.contenu-accueil h1 {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+/* Bouton moderne */
+.btn-accueil {
+    padding: 15px 35px;
+    font-size: 18px;
+    border: none;
+    border-radius: 30px;
+    background: #ff9800;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-accueil:hover {
+    background: #e68900;
+    transform: scale(1.1);
+}
+
+
+/* ===== LOADER ===== */
+
+#loader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.spinner {
+    width: 60px;
+    height: 60px;
+    border: 6px solid #fff;
+    border-top: 6px solid #ff9800;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    100% { transform: rotate(360deg); }
+}
+
+
+.panier-flottant {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #ff9800;
+    color: white;
+    font-size: 24px;
+    padding: 15px;
+    border-radius: 50%;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    transition: 0.3s;
+}
+
+.panier-flottant:hover {
+    transform: scale(1.2);
+    background: #e68900;
+}
+
+
+.accueil {
+    height: 100vh;
+    background-image: url("images/ecomme.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: zoomBg 20s infinite alternate;
+}
+
+@keyframes zoomBg {
+    from {
+        background-size: 100%;
+    }
+    to {
+        background-size: 110%;
+    }
+}

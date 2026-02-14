@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Commande</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="afficherResume()">
+<header>
+<h1>Finaliser votre commande</h1>
+     <nav>
+        <a href="index.html">Accueil</a>
+        <a href="produits.html">Produits</a>
+        <a href="panier.html">Panier</a>
+        <a href="apropos.html">À propos</a>
+        <a href="commande.html">Commandez</a>
+    </nav>
+</header>
+
+<div id="resumeCommande"></div>
+
+<br>
+
+<button onclick="payer()">Payer Mobile Money</button>
+<button onclick="envoyerWhatsApp()">Commander via WhatsApp</button>
+
+<script src="script.js"></script>
+
+<script>
+function afficherResume(){
+    let panier = JSON.parse(localStorage.getItem("panier")) || [];
+    let container = document.getElementById("resumeCommande");
+
+    if(panier.length === 0){
+        container.innerHTML = "Panier vide";
+        return;
+    }
+
+    let total = 0;
+    container.innerHTML = "";
+
+    panier.forEach(p=>{
+        total += p.prix;
+        container.innerHTML += `<p>${p.nom} - $${p.prix}</p>`;
+    });
+
+    container.innerHTML += `<h2>Total : $${total}</h2>`;
+}
+
+function payer(){
+    window.open("https://pay.flutterwave.com/link/TONLIEN", "_blank");
+}
+
+function envoyerWhatsApp(){
+    let panier = JSON.parse(localStorage.getItem("panier")) || [];
+    let message = "Nouvelle commande:%0A";
+    let total = 0;
+
+    panier.forEach(p=>{
+        message += p.nom + " - $" + p.prix + "%0A";
+        total += p.prix;
+    });
+
+    message += "Total: $" + total;
+
+    window.open("https://wa.me/243XXXXXXXXX?text=" + message, "_blank");
+}
+</script>
+
+</body>
+</html>
