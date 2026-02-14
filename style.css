@@ -117,7 +117,7 @@ footer{
     margin:0;
     padding:0;
     height:100vh;
-    background-image: url("images/ecomme.jpg");
+    background-image: url("ecomme.jpg");
     background-size: cover;       /* occupe toute la page */
     background-position: center;  /* bien centrée */
     background-repeat: no-repeat; /* pas de répétition */
@@ -154,7 +154,7 @@ button:hover{
 
 .accueil {
     height: 100vh;
-    background-image: url("images/ecomme.jpg");
+    background-image: url("ecomme.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -269,7 +269,7 @@ button:hover{
 
 .accueil {
     height: 100vh;
-    background-image: url("images/ecomme.jpg");
+    background-image: url("ecomme.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -288,4 +288,5 @@ button:hover{
         background-size: 110%;
     }
 }
+
 
